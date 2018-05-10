@@ -9,11 +9,8 @@
     margin-right: 0.5em;
   }
   .image_thumbnail {
-	height: auto;
-	width: 60px;
-	margin-right: 1em;
-	vertical-align: left;
-	margin-top: 12px;
+    height: 60px;
+    margin-right: 0.5em;
   }
 
   .header__title {
