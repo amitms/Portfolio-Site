@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Project P1: Build a Portfolio Site</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/responsiveness.css">
+	<script src="js/javascript.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="header__logo" src="img/abstract_multicolor_colors_desktop_1440x900_hd-wallpaper-1541901.jpg" alt="logo image"></img>
+		<h1 class="header__title">Portfolio: Amit Man Singh</h1>
+        <p class="header__subtitle">Front-End Web Developer</p>
+<!--navigation when collapsed-->
+        <a id="menu" class="header__menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+        </a>
+    </header>
+
+    <nav id="drawer" class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#Home">Home</a></li>
+        <li class="nav__item"><a href="resume_AMIT M SINGH 03242018 Database.docx">About</a></li>
+        <li class="nav__item"><a href="#Projects">Projects</a></li>
+        <li class="nav__item"><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+
+<!-- Here is our page's main content -->
+	<main>Project works:
+		<div class="row"> 
+			<div class="column">
+				<a href="project-pixel-art-maker-starter-master/index.html">
+					<img class="header__logo" src="img/screenshot.jpg" alt="pixel Art Maker">
+						<h2 class="post-title">Pixel Art Maker</h2>
+					</img>
+				</a>
+			</div>
+			
+			<div class="column">
+				<a href="fend-animal-trading-cards-master/card.html">
+					<img class="header__logo" src="img/Malurus_splendens_-Yangebup,_Western_Australia,_Australia_-male-8.jpg" alt="fend-animal-trading-cards-master">
+						<h2 class="post-title">fend-animal-trading-cards-master</h2>
+					</img>
+				</a>
+			</div>  
+			
+			<div class="column">		
+				<a href="https://rpubs.com/amitms/WordPrediction">
+					<img class="header__logo" src="img/rpubs_word_prediction.jpg" alt="rpubs_word_prediction">
+						<h2 class="post-title">rpubs_word_prediction</h2>
+					</img>
+				</a>
+			</div>
+			
+			<div class="column">		
+				<a href="https://rpubs.com/amitms/Shiny_Application_and_Reproducible_Pitch">
+					<img class="header__logo" src="img/reproducible_pitch.jpg" alt="reproducible_pitch">
+						<h2 class="post-title">reproducible_pitch</h2>
+					</img>
+				</a>
+			</div>
+			<div class="column">
+				<a href="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
+					<img src="img/fire_oneplus_5t_stock_4k-3840x2160.jpg." style="width:30%">
+				<h2 class="post-title">Upcoming Abstract</h2></img>
+				</a>
+			</div>
+		</div>
+	</main>
+
+
+<!--navigation-------------------------------------------->
+
+	<footer>
+		<div class="footerline">
+			©Copyright 2018 by nobody. All rights reserved.
+		</div>      
+		
+	</footer>
+<!--navigation-------------------------------------------->
+<script>
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+</script>
+</body>
+</html>
+
+		
+	
+
+
+	
+
