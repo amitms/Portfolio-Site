@@ -23,6 +23,19 @@ border-color: #7d97ad;
   vertical-align: left;
   margin-top: 12px;
 }
+.header__logo {
+  height: 40px;
+  margin-right: 1em;
+  vertical-align: left;
+  margin-top: 12px;
+}
+.image_thumbnail {
+  height: 80px;
+  margin-right: 1em;
+  vertical-align: left;
+  margin-top: 12px;
+}
+
 .header__title {
   font-weight: 150;
   font-size: 14apx;
