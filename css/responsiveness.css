@@ -8,11 +8,12 @@
     height: 30px;
     margin-right: 0.5em;
   }
-  .image_thumbnail {
-    height: 60px;
-    margin-right: 0.5em;
-  }
-
+.image_thumbnail {
+  height: 80px;
+  margin-right: 1em;
+  vertical-align: left;
+  margin-top: 12px;
+}
   .header__title {
     margin-left: 0;
     font-size: 1em;
