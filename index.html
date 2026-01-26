@@ -8,6 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/responsiveness.css">
 	<script src="js/javascript.js"></script>
+	<style>
+		.gallery img {
+		width: 1000px;
+		margin: 10px;
+		}
+	</style>
 </head>
 
 <body>
@@ -15,7 +21,7 @@
     <header class="header">
         <img class="header__logo" src="img/abstract_multicolor_colors_desktop_1440x900_hd-wallpaper-1541901.jpg" alt="logo image"></img>
 		<h1 class="header__title">Portfolio: Amit Man Singh</h1>
-        <p class="header__subtitle">Front-End Web Developer</p>
+        <p class="header__subtitle">Technology Lead - Database Developer</p>
 <!--navigation when collapsed-->
         <a id="menu" class="header__menu">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -27,7 +33,7 @@
     <nav id="drawer" class="nav">
       <ul class="nav__list">
         <li class="nav__item"><a href="#Home">Home</a></li>
-        <li class="nav__item"><a href="resume_AMIT M SINGH 03242018 Database.docx">About</a></li>
+        <li class="nav__item"><a href="Resume_AMIT_M_SINGH_01232026_C indeed.docx">About</a></li>
         <li class="nav__item"><a href="#Projects">Projects</a></li>
         <li class="nav__item"><a href="#Contact">Contact</a></li>
       </ul>
@@ -73,6 +79,20 @@
 				<h2 class="post-title">Upcoming Abstract</h2></img>
 				</a>
 			</div>
+			<div class="column">
+				<a href="#" onclick="showImagesPowerBI(); return false;">				
+				<img class="image_thumbnail" src="img/powerbi/Screenshot 2026-01-26 142851.png">
+				<h2 class="post-title">PowerBI</h2></img>
+				</a>
+			</div>
+			<div class="column">
+				<a href="#" onclick="showImages(); return false;">				
+				<img class="image_thumbnail" src="img/powerbi/Screenshot 2026-01-26 142851.png">
+				<h2 class="post-title">Tableau</h2></img>
+				</a>
+			</div>
+
+			<div class="gallery" id="gallery"></div>
 		</div>
 	</main>
 
@@ -99,6 +119,29 @@
         drawer.classList.remove('open');
       });
 </script>
+<!-- show Images upon clicking -->
+<script>
+function showImagesPowerBI(){
+	const gallery =  document.getElementById("gallery");
+	gallery.innerHTML =`
+		<img src = "img/powerbi/Screenshot 2026-01-26 142851.png">
+		<img src = "img/powerbi/Screenshot 2026-01-26 142912.png">
+		<img src = "img/powerbi/Screenshot 2026-01-26 142929.png">
+		`;
+}
+</script>
+<script>
+function showImagesTableau(){
+	const gallery =  document.getElementById("gallery");
+	gallery.innerHTML =`
+		<img src = "img/powerbi/Screenshot 2026-01-26 142851.png">
+		<img src = "img/powerbi/Screenshot 2026-01-26 142912.png">
+		<img src = "img/powerbi/Screenshot 2026-01-26 142929.png">
+		`;
+}
+</script>
+
+
 </body>
 </html>
 
