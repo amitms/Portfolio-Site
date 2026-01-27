@@ -155,18 +155,19 @@ async function loadImages(folder) {
 <!-- details for each different projects---------------------------------> 	
 	if (folder === 'Apache_Airflow_ETL_workflow'){
 	gallery.innerHTML =` 
-	<p>Airflow UIs showing<br>
+	<p><b>Airflow UIs showing<br>
+	   Apache Airflow using Bash Operator</b><br>
 	   ETL workflow /etc/passwd -> extracted-data.txt -> transformed.csv<br>
-	   Apache Airflow using Python Operator<br>
+	   <b>Apache Airflow using Python Operator</b><br>
 	   ETL workflow: /etc/passwd -> extracted-data_py.txt -> transformed_py.txt -> data_for_analytics_py.csv<br>
-	   codes: https://github.com/amitms/Apache_Airflow_ETL_workflow_using_Bash_operator_n_Python_operator<br>
+	   <b>more code details are in</b> : https://github.com/amitms/Apache_Airflow_ETL_workflow_using_Bash_operator_n_Python_operator<br>
 			  https://github.com/amitms/ETL_pipeline_using_BashOperator_for_different_data_sources			   
 	</p>`;
 	}
 	else if(folder === 'spark') 
 	{
 	gallery.innerHTML =` 
-	<p>more code details are in :
+	<p><b>more code details are in</b> :
 	  https://github.com/amitms/Spark_projects
 	  https://github.com/amitms/Apache_spark_cluster_worker_executer_examples			   
 	</p>`;
@@ -174,7 +175,7 @@ async function loadImages(folder) {
 	else if(folder === 'webscraping_using_pandas_BS') 
 	{
 	gallery.innerHTML =`
-	<p>more code details are in :			     
+	<p><b>more code details are in</b> :			     
 		https://github.com/amitms/Webscraping_using_Pandas_or_Beautiful_soup
 	</p>`;
 	}		
