@@ -35,10 +35,9 @@
         <li class="nav__item"><a href="#Home">Home</a></li>
         <li class="nav__item"><a href="Resume_AMIT_M_SINGH_01232026_C indeed.docx">About</a></li>
         <li class="nav__item"><a href="#Projects">Projects</a></li>
-        <li class="nav__item"><a href="#Contact">Contact</a></li>
+        <li class="nav__item"><a id="Contact" href="#Contact">Contact</a></li>
       </ul>
     </nav>
-
 <!-- Here is our page's main content -->
 	<main>Project works:
 		<div class="row"> 
@@ -102,7 +101,7 @@
 	<footer>
 		<div class="footerline">
 			©Copyright 2018 by nobody. All rights reserved.
-		</div>      
+		https://amitms.github.io/Portfolio-Site/project-pixel-art-maker-starter-master/index.html</div>      
 		
 	</footer>
 <!--navigation-------------------------------------------->
@@ -119,20 +118,15 @@
         drawer.classList.remove('open');
       });
 </script>
-
+<!---- show contact info upon clicking ---->
+<script>
+  document.getElementById('Contact').addEventListener('click', () => {
+    alert("AMIT MAN SINGH \n Forth Worth, TX \n Contact: 812 391 1400 \n amitmshyd@gmail.com \n	Linkedin: https://www.linkedin.com/in/amit-singh-ms/ \n	Github: https://github.com/amitms");
+  });
+</script>
+  
 <!-- show Images upon clicking using node.js api/images?folder=powerbi, testing : http://localhost:3000/api/images?folder=powerbi--> 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const folderSelect = document.getElementById('folderSelect');
-  const folders = ['powerbi', 'tableau']; // Add folder names manually or generate via script
-  folders.forEach(f => {
-    const option = document.createElement('option');
-    option.value = f;
-    option.textContent = f;
-    folderSelect.appendChild(option);
-  });
-});
-
 async function loadImages(folder) {
   try {
     const res = await fetch(`img/${folder}/images.json`);
