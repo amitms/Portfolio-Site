@@ -84,13 +84,32 @@
 				<h2 class="post-title">Tableau</h2></img>
 				</a>
 			</div>
+			
+			<div class="column">
+				<a href="#" onclick="loadImages('Apache_Airflow_ETL_workflow'); return false;">				
+				<img class="image_thumbnail" src="img/Apache_Airflow_ETL_workflow/1.png">
+				<h2 class="post-title">Apache_Airflow_ETL_workflow</h2></img>
+				</a>
+			</div>
+			<div class="column">
+				<a href="#" onclick="loadImages('spark'); return false;">				
+				<img class="image_thumbnail" src="img/spark/1.png">
+				<h2 class="post-title">spark</h2></img>
+				</a>
+			</div>
+			<div class="column">
+				<a href="#" onclick="loadImages('webscraping_using_pandas_BS'); return false;">				
+				<img class="image_thumbnail" src="img/webscraping_using_pandas_BS/1.png">
+				<h2 class="post-title">webscraping_using_pandas_BS</h2></img>
+				</a>
+			</div>
+			
 			<div class="column">
 				<a href="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
 					<img class="image_thumbnail" src="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
 				<h2 class="post-title">Upcoming Abstract</h2></img>
 				</a>
 			</div>
-
 			<div class="gallery" id="gallery"></div>
 		</div>
 	</main>
@@ -133,7 +152,35 @@ async function loadImages(folder) {
     const images = await res.json();
 
     const gallery = document.getElementById('gallery');
-    gallery.innerHTML = '';
+<!-- details for each different projects---------------------------------> 	
+	if (folder === 'Apache_Airflow_ETL_workflow'){
+	gallery.innerHTML =` 
+	<p>Airflow UIs showing
+	   ETL workflow /etc/passwd -> extracted-data.txt -> transformed.csv
+	   Apache Airflow using Python Operator
+	   ETL workflow: /etc/passwd -> extracted-data_py.txt -> transformed_py.txt -> data_for_analytics_py.csv
+	   codes: https://github.com/amitms/Apache_Airflow_ETL_workflow_using_Bash_operator_n_Python_operator
+			  https://github.com/amitms/ETL_pipeline_using_BashOperator_for_different_data_sources			   
+	</p>`;
+	}
+	else if(folder === 'spark') 
+	{
+	gallery.innerHTML =` 
+	<p>more code details are in :
+	  https://github.com/amitms/Spark_projects
+	  https://github.com/amitms/Apache_spark_cluster_worker_executer_examples			   
+	</p>`;
+	}	
+	else if(folder === 'webscraping_using_pandas_BS') 
+	{
+	gallery.innerHTML =`
+	<p>more code details are in :			     
+		https://github.com/amitms/Webscraping_using_Pandas_or_Beautiful_soup
+	</p>`;
+	}		
+<!-- default--------------------------------------------------------------> 	
+	else
+    gallery.innerHTML = '';	
 
     images.forEach(img => {
       const image = document.createElement('img');
@@ -144,8 +191,8 @@ async function loadImages(folder) {
     console.error('Failed to load images:', err);
   }
 }
-
 </script>
+
 </body>
 </html>
 
