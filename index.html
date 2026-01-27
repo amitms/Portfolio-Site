@@ -105,12 +105,6 @@
 		</div>      
 		
 	</footer>
-<!--select folder to display images-------------------------->
-<select id="folderSelect">
-	<option value="powerbi">PowerBI</option>
-	<option value="tableau">Tableau</option>
-</select>
-<button id="loadBtn">Load Images</button>
 <!--navigation-------------------------------------------->
 <script>
       var menu = document.querySelector('#menu');
@@ -129,23 +123,13 @@
 <!-- show Images upon clicking using node.js api/images?folder=powerbi, testing : http://localhost:3000/api/images?folder=powerbi--> 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-
   const folderSelect = document.getElementById('folderSelect');
-  const loadBtn = document.getElementById('loadBtn');
-
-  // Auto-detect folders inside /img
   const folders = ['powerbi', 'tableau']; // Add folder names manually or generate via script
   folders.forEach(f => {
     const option = document.createElement('option');
     option.value = f;
     option.textContent = f;
     folderSelect.appendChild(option);
-  });
-
-  // 2Load images on button click
-  loadBtn.addEventListener('click', () => {
-    const folder = folderSelect.value;
-    loadImages(folder);
   });
 });
 
