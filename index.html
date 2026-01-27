@@ -74,21 +74,21 @@
 				</a>
 			</div>
 			<div class="column">
-				<a href="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
-					<img class="image_thumbnail" src="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
-				<h2 class="post-title">Upcoming Abstract</h2></img>
-				</a>
-			</div>
-			<div class="column">
-				<a href="#" onclick="showImagesPowerBI(); return false;">				
+				<a href="#" onclick="loadImages('powerbi'); return false;">
 				<img class="image_thumbnail" src="img/powerbi/Screenshot 2026-01-26 142851.png">
 				<h2 class="post-title">PowerBI</h2></img>
 				</a>
 			</div>
 			<div class="column">
-				<a href="#" onclick="showImages(); return false;">				
-				<img class="image_thumbnail" src="img/powerbi/Screenshot 2026-01-26 142851.png">
+				<a href="#" onclick="loadImages('tableau'); return false;">				
+				<img class="image_thumbnail" src="img/tableau/treemap.png">
 				<h2 class="post-title">Tableau</h2></img>
+				</a>
+			</div>
+			<div class="column">
+				<a href="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
+					<img class="image_thumbnail" src="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
+				<h2 class="post-title">Upcoming Abstract</h2></img>
 				</a>
 			</div>
 
@@ -119,29 +119,26 @@
         drawer.classList.remove('open');
       });
 </script>
-<!-- show Images upon clicking -->
+
+<!-- show Images upon clicking using node.js api/images?folder=powerbi, testing : http://localhost:3000/api/images?folder=powerbi--> 
 <script>
-function showImagesPowerBI(){
-	const gallery =  document.getElementById("gallery");
-	gallery.innerHTML =`
-		<img src = "img/powerbi/Screenshot 2026-01-26 142851.png">
-		<img src = "img/powerbi/Screenshot 2026-01-26 142912.png">
-		<img src = "img/powerbi/Screenshot 2026-01-26 142929.png">
-		`;
+async function loadImages(folder) {
+  try {
+    const response = await fetch(`http://localhost:3000/api/images?folder=${folder}`);
+    const images = await response.json();
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = '';
+
+    images.forEach(img => {
+      const image = document.createElement('img');
+      image.src = `http://localhost:3000/img/${folder}/${img}`;
+      gallery.appendChild(image);
+    });
+  } catch (err) {
+    console.error('Failed to load images', err);
+  }
 }
 </script>
-<script>
-function showImagesTableau(){
-	const gallery =  document.getElementById("gallery");
-	gallery.innerHTML =`
-		<img src = "img/powerbi/Screenshot 2026-01-26 142851.png">
-		<img src = "img/powerbi/Screenshot 2026-01-26 142912.png">
-		<img src = "img/powerbi/Screenshot 2026-01-26 142929.png">
-		`;
-}
-</script>
-
-
 </body>
 </html>
 
