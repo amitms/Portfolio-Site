@@ -122,20 +122,31 @@
 
 <!-- show Images upon clicking using node.js api/images?folder=powerbi, testing : http://localhost:3000/api/images?folder=powerbi--> 
 <script>
-async function loadImages(folder) {
+document.addEventListener('DOMContentLoaded', () => {
+  const BACKEND_URL = window.location.hostname.includes('localhost')
+    ? 'http://localhost:3000'  // local development
+    : 'https://YOUR-PRODUCTION-BACKEND.com'; // replace with hosted URL
+
+  document.getElementById('loadBtn').addEventListener('click', () => {
+    loadImages('particular', BACKEND_URL);
+  });
+});
+
+async function loadImages(folder, BACKEND_URL) {
   try {
-    const response = await fetch(`http://amitms.github.io/Portfolio-Site/api/images?folder=${folder}`);
-    const images = await response.json();
+    const res = await fetch(`${BACKEND_URL}/api/images?folder=${folder}`);
+    const images = await res.json();
+
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
     images.forEach(img => {
-      const image = document.createElement('img');
-      image.src = `http://amitms.github.io/Portfolio-Site/img/${folder}/${img}`;
-      gallery.appendChild(image);
+      const i = document.createElement('img');
+      i.src = `${BACKEND_URL}/img/${folder}/${img}`;
+      gallery.appendChild(i);
     });
   } catch (err) {
-    console.error('Failed to load images', err);
+    console.error('Failed to load images:', err);
   }
 }
 </script>
