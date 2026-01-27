@@ -124,14 +124,14 @@
 <script>
 async function loadImages(folder) {
   try {
-    const response = await fetch(`http://localhost:3000/api/images?folder=${folder}`);
+    const response = await fetch(`http://amitms.github.io/Portfolio-Site/api/images?folder=${folder}`);
     const images = await response.json();
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
     images.forEach(img => {
       const image = document.createElement('img');
-      image.src = `http://localhost:3000/img/${folder}/${img}`;
+      image.src = `http://amitms.github.io/Portfolio-Site/img/${folder}/${img}`;
       gallery.appendChild(image);
     });
   } catch (err) {
