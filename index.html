@@ -98,6 +98,12 @@
 				<h2 class="post-title">webscraping_using_pandas_BS</h2></img>
 				</a>
 			</div>
+			<div class="column">
+				<a href="#" onclick="loadImages('ETL_weather_Looker'); return false;">				
+				<img class="image_thumbnail" src="img/ETL_weather_Looker/1.png">
+				<h2 class="post-title">ETL_weather_Looker</h2></img>
+				</a>
+			</div>
 			
 			<div class="column">
 				<a href="img/fire_oneplus_5t_stock_4k-3840x2160.jpg">
@@ -172,6 +178,13 @@ async function loadImages(folder) {
 	gallery.innerHTML =`
 	<p><b>more code details are in</b> :			     
 		https://github.com/amitms/Webscraping_using_Pandas_or_Beautiful_soup
+	</p>`;
+	}		
+	else if(folder === 'ETL_weather_Looker') 
+	{
+	gallery.innerHTML =`
+	<p><b>more code details are in</b> :			     
+		https://github.com/amitms/ETL_weather_Looker
 	</p>`;
 	}		
 <!-- default--------------------------------------------------------------> 	
