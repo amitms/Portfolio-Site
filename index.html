@@ -99,6 +99,12 @@
 				</a>
 			</div>
 			<div class="column">
+				<a href="#" onclick="loadImages('healthcare_dw'); return false;">				
+				<img class="image_thumbnail" src="img/healthcare_dw/1.png">
+				<h2 class="post-title">Datawarehousing</h2></img>
+				</a>
+			</div>
+			<div class="column">
 				<a href="#" onclick="loadImages('ETL_weather_Looker'); return false;">				
 				<img class="image_thumbnail" src="img/ETL_weather_Looker/1.png">
 				<h2 class="post-title">ETL_weather_API_to_Google_Looker</h2></img>
@@ -185,6 +191,13 @@ async function loadImages(folder) {
 	gallery.innerHTML =`
 	<p><b>more code details are in</b> :			     
 		https://github.com/amitms/ETL_weather_Looker
+	</p>`;
+	}		
+	else if(folder === 'datawarehousing_dw') 
+	{
+	gallery.innerHTML =`
+	<p><b>more code details are in</b> :			     
+		https://github.com/amitms/healthcare_dw
 	</p>`;
 	}		
 <!-- default--------------------------------------------------------------> 	
